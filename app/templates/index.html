@@ -1,3 +1,4 @@
+{% import 'macros.html' as macro%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +8,29 @@
     {% else %}
     <title>Top Headlines</title>
     {% endif %}
-    {% import 'macros.html' as macro%}
     
+
 </head>
 <body>
+     <h2> Top Headlines Globally </h2>
+  <ul id="articles">
+    {% for fav_source in sources %}
+      <!-- <li>{{ fav_source.urlToImage }}</li> -->
+      <!-- <li> -->
+        <img src="{{ fav_source.urlToImage }}" alt="">
+        <br>
+        <p id="info">
+        <a href="{{ fav_source.url }}">{{ fav_source.title }}</a>
+        <br>
+        {{ fav_source.content }}
+        <br>
+        published at {{ fav_source.time|truncate(15) }}
+        </p>
+      <!-- </li> -->
+    {% endfor %}
+  </ul>
+  <hr>
+  
     
 </body>
 </html>
