@@ -1,14 +1,14 @@
 import unittest
 from app.models import newss
-News = newss.News
+Newss = newss.Newss
 
-class NewsTest(unittest.TestCase):
+class NewssTest(unittest.TestCase):
 
     def setUp(self):
-        self.new_News = News()
+        self.new_Newss = Newss()
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.new_newss,News))
+        self.assertTrue(isinstance(self.new_newss,Newss))
 
 if __name__ == '__main__':
     unittest.main()        
