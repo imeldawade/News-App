@@ -7,8 +7,8 @@ NEWS_API_KEY = environ.get('NEWS_API_KEY')
 
 class Config:
 
-    NEWS_API_BASE_URL ='https://newsapi.org/v2/top-headlines/sources?apiKey=1779feda50ed4fc09523cd8838d8dc3f'
-    # NEW_API_KEY='https://newsapi.org/v2/top-headlines/{}?apiKey={}'
+    NEWS_API_BASE_URL ='https://newsapi.org/v2/everything?q=Tesla&from=2022-03-02&sortBy=popularity&apiKey=1779feda50ed4fc09523cd8838d8dc3f'
+    
 
 
 class ProdConfig(Config): 

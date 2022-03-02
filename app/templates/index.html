@@ -14,16 +14,16 @@
 <body>
      <h2> Top Headlines Globally </h2>
   <ul id="newss">
-    {% for fav_source in sources %}
+    {% for items in sources %}
       
-        <img src="{{ fav_source.urlToImage }}" alt="">
+        <img src="{{ items.urlToImage }}" alt="">
         <br>
         <p id="info">
-        <a href="{{ fav_source.url }}">{{ fav_source.title }}</a>
+        <a href="{{ items.url }}">{{ items.title }}</a>
         <br>
-        {{ fav_source.content }}
+        {{ items.content }}
         <br>
-        published at {{ fav_source.time|truncate(15) }}
+        published at {{ items.time|truncate(15) }}
         </p>
       
     {% endfor %}
