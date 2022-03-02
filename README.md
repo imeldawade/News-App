@@ -1,17 +1,32 @@
-# NEWS-APP
+# News App
 
-### Author
-Imelda Wade
+## Table of Contents
+  1. [Description](#description)
+  2. [Technologies](#technologies)
+  4. [Installation](#installation)
+  5. [License](#license)
 
-### Description
-Top News stories globally
+## Description
+Top Headlines
 
-## Technologies Used
-* [python3.8]
 
-## Contact Information
-If you have any question or contributions, email me at [imeldawade02@gmail.com]
+## Technologies
+Python3.8
 
-## License
+## Installation
+#### Pre-requisites
+* python3.8
+* pip
+
+Using git, clone it to your local repo from:
+
+https://github.com/imeldawade/News-App.git
+
+### Running the App
+Open terminal
+ * $ #!/usr/bin/env python3.8
+ * $ chmod +x run.py
+ * $ ./run.py
+
 * *MIT [License](/LICENSE)*
-* Copyright (c) 2022 ** Imelda Wade **
+* Copyright (c) 2022 ** Imelda Wade ** 
