@@ -1,4 +1,4 @@
-# Password-Locker
+# NEWS-APP
 
 ### Author
 Imelda Wade
