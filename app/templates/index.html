@@ -13,10 +13,9 @@
 </head>
 <body>
      <h2> Top Headlines Globally </h2>
-  <ul id="articles">
+  <ul id="newss">
     {% for fav_source in sources %}
-      <!-- <li>{{ fav_source.urlToImage }}</li> -->
-      <!-- <li> -->
+      
         <img src="{{ fav_source.urlToImage }}" alt="">
         <br>
         <p id="info">
@@ -26,7 +25,7 @@
         <br>
         published at {{ fav_source.time|truncate(15) }}
         </p>
-      <!-- </li> -->
+      
     {% endfor %}
   </ul>
   <hr>

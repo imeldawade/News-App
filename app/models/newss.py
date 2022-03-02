@@ -1,25 +1,22 @@
-class Newss:
+# class Newss:
 
-    def __init__(self,urlToImage,title,description,url,time,content):
-        self.urlToImage=urlToImage
-        self.title=title
-        self.description=description
-        self.url=url
-        self.time=time
-        self.content=content
+#     def __init__(self,urlToImage,title,description,url,time,content):
+#         self.urlToImage=urlToImage
+#         self.title=title
+#         self.description=description
+#         self.url=url
+#         self.time=time
+#         self.content=content
 
         
 
-class Sources:
+class Newss:
 
-    def __init__(self,id,name,description,url,language,country):
+    def __init__(self,id,name,url,):
         '''
         
         '''
         self.id = id
         self.name = name
-        self.description = description
         self.url = url
-        self.language = language
-        self.country = country
         

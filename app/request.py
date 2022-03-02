@@ -2,47 +2,36 @@ from app import app
 import urllib.request,json
 from .models import newss
 Newss = newss.Newss 
-Sources = newss.Sources
 
 api_key = app.config['NEWS_API_KEY']
 
-
 base_url = app.config["NEWS_API_BASE_URL"]
+  
+def get_newss(sources):
+  get_newss_url=base_url.format(sources,api_key)
+  
+  with urllib.request.urlopen(get_newss_url) as url:
+    get_newss_data=url.read()
+    get_newss_res=json.loads(get_newss_data)
+    newss_results = None
+    
+    if get_newss_res['sources']:
+      newss_results_list=get_newss_res['sources']
+      newss_results=process_result(newss_results_list)
 
-def get_newss(category):
-    get_newss_url = base_url.format(category,api_key)
+  return newss_results     
 
-    with urllib.request.urlopen(get_newss_url) as url:
-        get_newss_data = url.read()
-        get_newss_response = json.loads(get_newss_data)
+def process_result(newss_list):
+  newss_results=[]
 
-        newss_results = None
+  for newss_item in newss_list:
+    id=newss_item.get('id')
+    name=newss_item.get('name')
+    url=newss_item.get('url')
+    
 
-        if get_newss_response['newss']:
-            newss_results_list = get_newss_response['newss']
-            newss_results = process_results(newss_results_list)
+    if id:
+      newss_object=Newss(id,name,url)
+      newss_results.append(newss_object)
 
-
-    return newss_results
-
-
-def process_results(newss_list):
-    newss_results=[]
-
-    for newss_item in newss_list:
-
-        urlToImage=newss_item.get('urlToImage')
-        title=newss_item.get('title')
-        description=newss_item.get('description')
-        url=newss_item.get('url')
-        time=newss_item.get('publishedAt')
-        content=newss_item.get('content')
-
-    if urlToImage:
-        newss_object=Newss(urlToImage,title,description,url,time,content)
-        newss_results.append(newss_object)
-
-    return newss_results 
-
-# def get_source('sources'):
-#     get_source_                             
+  return newss_results                           
