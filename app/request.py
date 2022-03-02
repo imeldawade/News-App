@@ -42,17 +42,3 @@ def process_results(newss_list):
 
 
 
-# def process_result(newss_list):
-#   newss_results=[]
-  
-#   for newss_item in newss_list:
-#     id=newss_item.get('id')
-#     name=newss_item.get('name')
-#     url=newss_item.get('url')
-    
-
-#     if id:
-#       newss_object=Newss(id,name,url)
-#       newss_results.append(newss_object)
-
-#   return newss_results                           
