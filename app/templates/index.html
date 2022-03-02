@@ -8,15 +8,18 @@
     {% else %}
     <title>Top Headlines</title>
     {% endif %}
-    
-    {% block styles%}
-    {{ super() }}
+    {% block styles %}
     <link rel="stylesheet" href="{{url_for('static',filename='/index.css')}}">
+
     {% endblock %}
 
 </head>
 <body>
-     <h2> Top Headlines Globally </h2>
+    
+
+{% block content %}
+<div class="container">
+  <h1> Top Headlines Globally </h1>
   <ul id="newss">
     {% for items in sources %}
       
@@ -33,7 +36,7 @@
     {% endfor %}
   </ul>
   <hr>
-  
-    
+</div>  
+{% endblock %}    
 </body>
 </html>

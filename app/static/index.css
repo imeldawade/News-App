@@ -1,0 +1,12 @@
+h1{
+    font-weight: 700;
+    font-style: italic;
+    padding-left: 30%;
+
+}
+body{
+    background-color: #000;
+    /* width: 10px; */
+    color: white;
+    overflow-x: hidden;
+}
