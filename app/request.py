@@ -10,7 +10,7 @@ base_url = app.config["NEWS_API_BASE_URL"]
 def get_newss(source):
   get_newss_url=base_url.format(source,api_key)
   
-  with urllib.request.urlopen(base_url) as url:
+  with urllib.request.urlopen(get_newss_url) as url:
     get_newss_data=url.read()
     get_newss_res=json.loads(get_newss_data)
     newss_results = None
