@@ -9,6 +9,10 @@
     <title>Top Headlines</title>
     {% endif %}
     
+    {% block styles%}
+    {{ super() }}
+    <link rel="stylesheet" href="{{url_for('static',filename='/index.css')}}">
+    {% endblock %}
 
 </head>
 <body>
