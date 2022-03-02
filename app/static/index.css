@@ -10,3 +10,14 @@ body{
     color: white;
     overflow-x: hidden;
 }
+img{
+    width: 70%;
+    margin-left: 13%;
+
+}
+.ps{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+}

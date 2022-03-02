@@ -21,21 +21,16 @@
 <div class="container">
   <h1> Top Headlines Globally </h1>
   <ul id="newss">
-    {% for items in sources %}
+        {% for items in sources %}
       
         <img src="{{ items.urlToImage }}" alt="">
-        <br>
-        <p id="info">
-        <a href="{{ items.url }}">{{ items.title }}</a>
-        <br>
-        {{ items.content }}
-        <br>
-        published at {{ items.time|truncate(15) }}
-        </p>
-      
-    {% endfor %}
+        <div class="ps">
+            <p><a href="{{ items.url }}">{{ items.title }}</a></p>
+            <p>{{ items.content }}</p>
+            <p>published at {{ items.time|truncate(15) }}</p>
+        </div>
+        {% endfor %}
   </ul>
-  <hr>
 </div>  
 {% endblock %}    
 </body>
